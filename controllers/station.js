@@ -65,17 +65,3 @@ exports.updateStation = async (req, res) => {
     }
 };
 
-// Delete a station by ID
-exports.deleteStation = async (req, res) => {
-    try {
-        // Find the station by ID
-        const station = await Station.findById(req.params.id);
-        if (!station) return res.status(404).json({ message: 'Station not found' });
-
-        // Delete the station
-        await station.remove();
-        res.json({ message: 'Station deleted successfully' });
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
