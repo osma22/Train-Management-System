@@ -1,7 +1,7 @@
 # Train-Management-System
 
 terminal-> 
-1.cd backend
+1.cd backend  [if the code runs from the zip]
 2. npm install
 3. npm start
 
